@@ -21,10 +21,7 @@ public class Customer implements Runnable {
             try {
                 cashier = supermarket.getFreeCashier();
             } catch (Exception e) {
-                System.out.println(name + ": МАГАЗИН ЗАКРЫТ!");
-            }
-            if (cashier == null) {
-                System.out.println(name + ": Нет свободных касс! Ожидайте!");
+                System.out.println(name + ": Supermarket is closed, so sad(((");
             }
             RandomUtils.sleepRandomTime(300, 1000);
         }

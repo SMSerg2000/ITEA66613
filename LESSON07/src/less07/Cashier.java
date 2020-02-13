@@ -21,13 +21,13 @@ public class Cashier {
     public synchronized void serveCustomer(Customer customer) {
         free = false;
         if (!open) {
-            System.out.println("Ёта касса не может обслуживать!");
+            System.out.println(customer.getName() + " This cashier is closed!");
             return;
         }
-        System.out.println("ќбслуживаетс€ покупатель: " + customer.getName());
+        System.out.println("Serving a customer " + customer.getName());
         RandomUtils.sleepRandomTime(3_000, 5_000);
         if (RandomUtils.rollTheDice(30)) {
-            System.out.println(" асса закрылась!");
+            System.out.println("Closing...");
             open = false;
         }
         free = true;
